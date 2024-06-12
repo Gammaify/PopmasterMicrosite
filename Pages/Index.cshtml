@@ -1,0 +1,216 @@
+﻿@page "/{GameType?}"
+@model IndexModel
+@{
+    Layout = "_PopmasterLayout";
+    ViewData["Title"] = "Homepage";
+    string ImageServerURL = "https://media.gingerfox.co.uk/PopmasterMicroSite";
+}
+<link href="~/css/index.css" rel="stylesheet" />
+<script src="~/js/index.js"></script>
+<link href="~/lib/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet" />
+<link href="~/lib/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet" />
+<script src="~/lib/owlcarousel2/owl.carousel.min.js"></script>
+<div class="bannerContainer">
+   @* <div class="h1BannerContainer">
+        <h1 class="bannerH1">A GAME OF TRUST AND TREACHERY...</h1>
+    </div>
+    <div class="h2BannerContainer">
+        <h2 class="bannerH2">DO YOU HAVE WHAT IT TAKES TO PLAY?</h2>
+    </div>*@
+
+    <img class="desktopVersion" src="@ImageServerURL/GF_POPMASTER_HOMEPAGE BANNER_WEB_1.png" />
+    <img class="mobileVersion" src="@ImageServerURL/GF_POPMASTER_HOMEPAGE BANNER_MOB_1.png" />
+    <a id="BuyNowBtnBanner" class="BuyNowBtn"><div id="ProductPrice"></div>Buy Now</a>
+</div>
+<div class="reviewBanner">
+    <div class="starContainer">
+        <img src="@ImageServerURL/STAR_PURPLE_FULL.png" />
+        <img src="@ImageServerURL/STAR_PURPLE_FULL.png" />
+        <img src="@ImageServerURL/STAR_PURPLE_FULL.png" />
+        <img src="@ImageServerURL/STAR_PURPLE_FULL.png" />
+        <img src="@ImageServerURL/STAR_PURPLE_HALF.png" />
+    </div>
+    <p class="totalReviews">(74 Reviews)</p>
+@*    <p class="reviewMobileText mobileVersion">RATED 5 STARS ON AMAZON FROM 89 REVIEWS</p>*@
+</div>
+<div id="InTheBox" class="InTheBoxContainer">
+
+    <div class="InTheBoxInfoContainer container">
+        <div class="boxContentsContainer">
+            <h2>What's In The Box?</h2>
+            <p>Popmaster Board Game Box Includes:</p>
+            <ul>
+                <li class="inTheBoxItem1">Game Board,</li>
+                <li class="inTheBoxItem2">Playing Pieces,</li>
+                <li class="inTheBoxItem3">Answer Tokens,</li>
+                <li class="inTheBoxItem4">Over 100 Questions,</li>
+                <li class="inTheBoxItem5">3 In 10 Question Answer Pad,</li>
+                <li class="inTheBoxItem6">Over 60 Bonus Category Questions,</li>
+                <li class="inTheBoxItem7">Additional Digital 3 In 10 Questions.</li>
+            </ul>
+        </div>
+        <img class="desktopVersion" src="@ImageServerURL/GF_POPMASTER_CONTENT_WEB.png" />
+        <img class="mobileVersion" src="@ImageServerURL/GF_POPMASTER_CONTENT_MOB.png" />
+
+
+    </div>
+</div>
+<div id="Reviews" class="reviewContainer">
+    <h2>Reviews</h2>
+    <div class="reviewCarousel owl-carousel">
+        <div class="review">
+            <div class="circle">
+                <p class="review1Text" >“Best present ever for a music quiz lover.”</p>
+            </div>
+           <div class="starRating">
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+            </div>
+            <p class="review1ByText">Review by Mrs A.</p>
+            </div>
+            <div class="review">
+                <div class="circle">
+                <p class="review2Text">“Brilliant game to match the radio quiz.”</p>
+                </div>
+                 <div class="starRating">
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+            </div>
+            <p class="review2ByText">Review by Paul Dickens</p>
+            </div>
+            <div class="review">
+                <div class="circle">
+                    <p class="review3Text">“The creators have done a really good job...”</p>
+                </div>
+                <div class="starRating">
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                </div>
+                <p class="review3ByText">Review by R. WEST-SOLEY</p>
+            </div>
+            <div class="review">
+                <div class="circle">
+                    <p class="review4Text">“A fun board game with tons of replayability.”</p>
+                </div>
+                <div class="starRating">
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                </div>
+                <p class="review4ByText">Review by OldGame</p>
+            </div>
+            <div class="review">
+                <div class="circle">
+                    <p class="review5Text">“The quality of the game feels really well made...”</p>
+                </div>
+                <div class="starRating">
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_WHITE_FULL.png" />
+                </div>
+                <p class="review5ByText">Review by Darren</p>
+            </div>
+            <div class="review">
+                <div class="circle">
+                    <p class="review6Text">“Quick and easy to play, great for music fans.”</p>
+                </div>
+                <div class="starRating">
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_ORANGE_FULL.png" />
+                    <img src="@ImageServerURL/STAR_WHITE_FULL.png" />
+                </div>
+                <p class="review6ByText">Review by Michael</p>
+            </div>
+        </div>
+</div>
+<div id="HowToPlay" class="VideoContainer">
+    <h4>How To Play</h4>
+
+    <div class="YTContainer">
+        <div id="player"></div>
+    </div>
+
+</div>
+<div class="MidBanner">
+    <img class="mobileVersion" src="@ImageServerURL/GF_POPMASTER_HOMEPAGE_BANNER_MOB_2.png" />
+    <img class="desktopVersion" src="@ImageServerURL/GF_POPMASTER_HOMEPAGE_BANNER_WEB_2.png" />
+</div>
+<div id="BuyFromUs" class="RTBFUContainer">
+    <h4>WHY BUY FROM US</h4>
+    <div class="cardContainer">
+        <img class="desktopVersion" src="@ImageServerURL/GF_POPMASTER_WHY_BUY_FROM_US_WEB.png" />
+        <img class="mobileVersion" src="@ImageServerURL/GF_POPMASTER_WHY_BUY_FROM_US_MOB.png" />
+    </div>
+</div>
+<div class="LifeStyleSlider owl-carousel">
+    <div class="lifeStyleImg">
+        <input type="hidden" class="boardGameImg1" value="@ImageServerURL/GF_POPMASTER_IMAGE_WEB_1.png" />
+        <input type="hidden" class="cardGameImg1" value="@ImageServerURL/GF_POPMASTER_CARD_IMAGE_1.jpg" />
+        <img class="LifestyleImg1Src" src="@ImageServerURL/GF_POPMASTER_IMAGE_WEB_1.png" />
+    </div>
+    <div class="lifeStyleImg">
+        <input type="hidden" class="boardGameImg2" value="@ImageServerURL/GF_POPMASTER_IMAGE_WEB_2.png" />
+        <input type="hidden" class="cardGameImg2" value="@ImageServerURL/GF_POPMASTER_CARD_IMAGE_2.jpg" />
+        <img class="LifestyleImg2Src" src="@ImageServerURL/GF_POPMASTER_IMAGE_WEB_2.png" />
+    </div>
+    <div class="lifeStyleImg">
+        <input type="hidden" class="boardGameImg3" value="@ImageServerURL/GF_POPMASTER_IMAGE_WEB_3.png" />
+        <input type="hidden" class="cardGameImg3" value="@ImageServerURL/GF_POPMASTER_CARD_IMAGE_3.jpg" />
+        <img class="LifestyleImg3Src" src="@ImageServerURL/GF_POPMASTER_IMAGE_WEB_3.png" />
+    </div>
+    <div class="lifeStyleImg">
+        <input type="hidden" class="boardGameImg4" value="@ImageServerURL/GF_POPMASTER_IMAGE_WEB_4.png" />
+        <input type="hidden" class="cardGameImg4" value="@ImageServerURL/GF_POPMASTER_CARD_IMAGE_4.jpg" />
+        <img class="LifestyleImg4Src" src="@ImageServerURL/GF_POPMASTER_IMAGE_WEB_4.png" />
+    </div>
+</div>
+<div id="FAQs" class="FAQContainer">
+    <h2 class="desktopVersion">Frequently Asked Questions</h2>
+    <h2 class="mobileVersion">FAQs</h2>
+    <div class="FAQCardContainer">
+        <div id="q1Card" class="FAQCard">
+            <p id="q1" class="FAQText">Q. How Much Does Delivery Cost?</p>
+            <p id="a1" class="FAQAnswerText">Standard delivery of 2-3 working days is free. Next-day delivery is available at a small cost. Read more <a href="https://gingerfox.co.uk/Help/DeliveryInformation">here</a>.</p>
+        </div>
+        <div id="q2Card" class="FAQCard">
+            <p id="q2" class="FAQText">Q. What Is The Minimum Age For This Game?</p>
+            <p id="a2" class="FAQAnswerText">We think this is a great game for players aged 14 years and over.</p>
+        </div>
+    </div>
+    <div class="FAQCardContainer">
+        <div id="q3Card" class="FAQCard">
+            <p id="q3" class="FAQText">Q. When Will I Recieve My Item?</p>
+            <p id="a3" class="FAQAnswerText">A tracking link will be emailed to you once your order has been shipped. <a href="https://gingerfox.co.uk/information/contact-us">Contact us</a> if you need more info.</p>
+        </div>
+        <div id="q4Card" class="FAQCard">
+            <p id="q4" class="FAQText">Q. How Many People Can Play?</p>
+            <p id="a4" class="FAQAnswerText">We recommend 2-4 players; however, this can easily be played in teams if you have more players</p>
+        </div>
+    </div>
+    <div class="FAQCardContainer">
+        <div id="q5Card" class="FAQCard">
+            <p id="q5" class="FAQText">Q. How do I access the digital content?</p>
+            <p id="a5" class="FAQAnswerText">Scan the QR code on the game cards to access the 3-in-10 final questions from Ken Bruce himself, along with bonus features.</p>
+        </div>
+        <div id="q6Card" class="FAQCard">
+            <p id="q6" class="FAQText">Q. What do I do if I lose a piece of the game?</p>
+            <p id="a6" class="FAQAnswerText">We understand how pieces can get misplaced or lost. <a href="https://gingerfox.co.uk/information/contact-us">Contact us</a> if you need a replacement part.</p>
+        </div>
+    </div>
+
+</div>

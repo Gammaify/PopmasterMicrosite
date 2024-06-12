@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+@{
+    string ImageServerURL = "https://media.gingerfox.co.uk/PopmasterMicroSite";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Popmaster Board Game</title>
+    <link href="https://use.typekit.net/thr0udu.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/PopmasterLayout.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="icon" type="image/png" sizes="32x32" href="@ImageServerURL/favicon.png">
+
+    <script src="~/lib/jquery/jquery.js" asp-append-version="true"></script>
+    <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js" asp-append-version="true"></script>
+    <script src="~/js/Shopify.js" asp-append-version="true"></script>
+    <script src="~/js/PopmasterLayout.js" asp-append-version="true"></script>
+    <script src="~/lib/js-cookie/js.cookie.js" asp-append-version="true"></script>
+</head>
+
+
+<body>
+    <wrapper class="d-flex flex-column min-vh-100">
+
+        <div class="headerContainer">
+            <a class="greatestHitsLink" href="https://planetradio.co.uk/greatest-hits/station/on-air/greatest-hits-radio-welcome/">
+                <div class="greatestHitsContainer">
+
+                        <p>Listen to Ken weekdays from 10am</p>
+                        <img src="@ImageServerURL/GHR_Master_Logo_Horiz_WhiteOnly-01-01.png" />
+                
+                
+                </div>
+            </a>
+            <header>
+               
+                <div class="headerMainContainer container">
+                    <a class="Logo" href="/">
+                        <img src="@ImageServerURL/GF_POPMASTER_LOGO.png" />
+                    </a>
+                    <ul class="Navigation">
+                        <li class="InBoxBtn">What's In The Box?</li>
+                        <li class="HowToPlayBtn">How To Play</li>
+                        <li class="ReviewsBtn">Reviews</li>
+                        <li class="FAQsBtn">FAQs</li>
+                    </ul>
+                    <a id="BuyNowBtn" class="BuyNowBtn">Buy Now</a>
+                    @*<button id="BuyNowBtn" class="BuyNowBtn" type="button">Buy Now</button>*@
+                </div>
+                
+            </header>
+            
+            <div class="mobileNavContainer">
+                <ul>
+                    <li class="InBoxBtn">In The Box</li>
+                    <li class="HowToPlayBtn">How To Play</li>
+                    <li class="ReviewsBtn">Reviews</li>
+                    <li class="FAQsBtn">FAQs</li>
+                </ul>
+            </div>
+            
+            @*<div class="gameTypeContainer">
+                <p class="boardGameText purple">Board Game</p>
+                <label class="switch">
+
+                    <input type="checkbox" id="gameTypeCheck">
+                    <span class="slider round"></span>
+
+                </label>
+                <p class="cardGameText white">Card Game</p>
+            </div>*@
+        </div>
+        
+
+
+        <main role="main" id="main" class="flex-fill">
+            @RenderBody()
+        </main>
+
+        <footer>
+            <div class="footerContainer container">
+                <img class="Logo2" src="@ImageServerURL/GF_POPMASTER_LOGO.png" />
+                @*<img class="Logo3" src="@ImageServerURL/WWTBAM_LOGO.png" />*@
+                <ul class="footerList">
+                    <li><a href="https://gingerfox.co.uk/information/contact-us">Contact Us</a></li>
+                    <li><a href="https://gingerfox.co.uk/Help/DeliveryInformation">Delivery & Returns</a></li>
+                    <li><a href="https://gingerfox.co.uk/Information/PrivacyPolicy">Privacy Policy</a></li>
+                </ul>
+                <ul class="footerList">
+                    <li><a href="https://gingerfox.co.uk/Information/TermsAndConditions">Terms & Conditions</a></li>
+                    <li><a href="https://gingerfox.co.uk/Information/EthicalEnvironmentalPolicy">Ethical & Environmental Policy</a></li>
+                    <li><a href="https://gingerfox.co.uk/Information/Sustainability">Sustainability Promise</a></li>
+                </ul>
+               @*<div class="socialContainer">
+                    <p>Follow Us</p>
+                    <div class="socialIconContainer">
+                        <a target="_blank" href="">
+                            <img src="@ImageServerURL/GF_POPMASTER_SOCIAL_1.png" />
+                        </a>
+                        <a href="">
+                            <img src="@ImageServerURL/GF_POPMASTER_SOCIAL_2.png" />
+                        </a>
+                        <a target="_blank" href="">
+                            <img src="@ImageServerURL/GF_POPMASTER_SOCIAL_3.png" />
+                        </a>
+                        <a target="_blank" href="">
+                            <img src="@ImageServerURL/GF_POPMASTER_SOCIAL_4.png" />
+                        </a>
+                        <a href="">
+                            <img src="@ImageServerURL/GF_POPMASTER_SOCIAL_5.png" />
+                        </a>
+
+                    </div>
+                </div>*@
+            </div>
+
+        </footer>
+        <div class="copyrightContainer container">
+            <p>All copyright is owned by Popmaster Official Ltd. The Popmaster word mark and logo are trademarks of Popmaster and used under licence Popmaster &copy; 1998 Popmaster 2018 &copy; | &copy;@DateTime.Now.Year Ginger Fox Games Ltd.</p>
+        </div>
+    </wrapper>
+    @await Component.InvokeAsync("CookieConsent", new
+    {
+    TrackingCookieNames = "Google Analytics"
+    })
+</body>
+
+</html>
